@@ -11,6 +11,7 @@ function Posts():any {
         }, []
     );
 
+
     if (!data) {
 
         return (
@@ -28,7 +29,7 @@ function Posts():any {
                     return (
                         <div key={index} >
                             <p>{post.id}</p>
-                            <p>{post.imageUrl}</p>
+                            <img src={post.imageUrl}/>
                             <p>{post.createdAt}</p>
                             <p>{post.message}</p>
                             <p>{post.postedBy.name}</p>
