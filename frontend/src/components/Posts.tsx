@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useEffect, useState } from "react";
 
-function Posts() {
+ function Posts() {
 
-    const [data, setMyData] = useState(null);
+    const [data, setData] = useState<any>();
 
     useEffect(
-        () => {
-            fetch("http://localhost:3001/posts").then(response => response.json()).then(data => setMyData(data));
+        () => {            
+            fetch("http://localhost:3001/posts/").then(response => response.json()).then(data => setData(data));
         }, []
     );
 
-
-
     return (
         <div>
-            <h1> hello!</h1>
-            {console.log(data)}
+            { data?.results[0].id }
         </div>
-    )
+
+    );
 }
+
 export default Posts;
