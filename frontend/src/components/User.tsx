@@ -45,3 +45,4 @@ function User():any {
 
 
 }
+export default User
