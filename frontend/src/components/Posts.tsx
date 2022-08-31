@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-function Posts() {
+function Posts():any {
 
     const [data, setData] = useState<any>();
 
@@ -24,24 +24,20 @@ function Posts() {
     return (
         <div>
             {
-                data.map((post, index) => {
+                data.results.map((post :any, index:number) => {
                     return (
                         <div key={index} >
                             <p>{post.id}</p>
                             <p>{post.imageUrl}</p>
                             <p>{post.createdAt}</p>
                             <p>{post.message}</p>
-                            <p>{post.postedBy}</p>
+                            <p>{post.postedBy.name}</p>
                             <p>{post.username }</p>
                         </div>
                     )
                 })
 
-            }
-
-            {/* {data.results[0].id}
-                 {data.results[0].message}
-                 {data.results[0].imageUrl} */}
+            }          
         </div>
 
     );
