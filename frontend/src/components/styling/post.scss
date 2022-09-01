@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
+
+.userPost {
+    box-shadow: 0 4px 16px 0 grey;
+    text-align: center;
+
+    #img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-family: Poppins;
+    font-size: 20px;
+    justify-content: center;
+}

@@ -3,7 +3,9 @@ import './App.css';
 import Posts from './components/Posts'
 import User from './components/User'
 import UserDetails from './components/UserDetails'
-import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import './components/styling/post.scss';
+import './components/styling/user.scss';
 
 function App() {
   return (

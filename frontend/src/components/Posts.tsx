@@ -23,17 +23,16 @@ function Posts():any {
     }
 
     return (
-        <div>
+        <div className="post">
             {
                 data.results.map((post :any, index:number) => {
                     return (
-                        <div key={index} >
-                            <p>{post.id}</p>
+                        <div className="userPost"key={index} >
                             <img src={post.imageUrl}/>
-                            <p>{post.createdAt}</p>
+                            <p>Date:{post.createdAt}</p>
+                            <p>Created by: {post.postedBy.name}</p>
                             <p>{post.message}</p>
-                            <p>{post.postedBy.name}</p>
-                            <p>{post.username }</p>
+                             
                         </div>
                     )
                 })
