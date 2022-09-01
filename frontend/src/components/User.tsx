@@ -1,5 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
+// import { BrowserRouter as Link, Router, Routes, Route } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 function User():any {
 
@@ -28,17 +30,24 @@ function User():any {
                 userData.results.map((user :any, index:number) => {
                     return (
                         <div key={index} >
-                            <p>{user.name}</p>
+                        
+                            {/* <Link to="/users/details"><UserDetails id={user.id}>{user.name}</Link> */}
+ 
+                            <Link to={{ pathname: `/users/${user.id}` }}>
+                                <p>{user.username}</p>                              
+                            </Link>
+
+
                             <p>{user.username}</p>
                             <p>{user.email}</p>
-                            <img src={user.coverImageUrl}/>
                             <img src={user.profileImageUrl}/>
                             
                         </div>
                     )
                 })
 
-            }          
+            }  
+            {/* <UserDetails id={user.id} /> // the one we are clicking on */}
         </div>
 
     );
