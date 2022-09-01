@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import UserCard from "./UserCard";
+import PostDetailsCard from "./PostDetailsCard";
 
 function UserDetails(): any {
 
@@ -25,20 +27,12 @@ function UserDetails(): any {
     }
 
     return (
-
-
-        <div key={userId} >
-            <img src={userData.profileImageUrl} />
-            <img src={userData.coverImageUrl} />
-            <p>{userData.name}</p>
-            <p>{userData.username}</p>
-            <p>{userData.email}</p>
-
-
+    <div key={userData.id}>
+        <UserCard usersData={userData} />
+        <PostDetailsCard postsDetails={userData.posts} /> 
         </div>
     )
 
-
 }
-       
+
 export default UserDetails;

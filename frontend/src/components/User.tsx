@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 // import { BrowserRouter as Link, Router, Routes, Route } from 'react-router-dom'
 import { Link } from "react-router-dom";
+import UserCard from "./UserCard";
 
 function User(): any {
 
@@ -25,33 +26,17 @@ function User(): any {
     }
 
     return (
-        <div className="userList">
+        <div className="userList" >
             {
                 userData.results.map((user: any, index: number) => {
                     return (
-                        <div
-                            className="user"
-                            key={index}
-                        >
-                            <img className="coverImage" src={user.coverImageUrl} />
-                            <img className="userImage" src={user.profileImageUrl} />
-
-                            <div className="details">
-                                <Link id="link" to={{ pathname: `/users/${user.id}` }}>
-                                    <p id="username">{user.username}</p>
-                                </Link>
-
-                                <p>{user.email}</p>
-                            </div>
-
-                        </div>
+                        <UserCard key={index} usersData={user} />
                     )
                 })
 
             }
 
         </div>
-
     );
 
 
