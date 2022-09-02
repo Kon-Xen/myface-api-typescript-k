@@ -1,4 +1,5 @@
 import React from "react";
+import './styling/postDetailsCard.scss';
 
 function PostDetailsCard({ postsDetails }): any {
 
@@ -15,12 +16,9 @@ function PostDetailsCard({ postsDetails }): any {
                     )
                 })
             }
-              
-        
+
         </div>
-    )
-
-
+    );
 }
 
 export default PostDetailsCard;
